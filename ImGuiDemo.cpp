@@ -26,4 +26,5 @@ usagi::ImGuiDemo::ImGuiDemo(std::shared_ptr<Runtime> runtime)
 
 usagi::ImGuiDemo::~ImGuiDemo()
 {
+    mMainWindow.window->removeEventListener(this);
 }
