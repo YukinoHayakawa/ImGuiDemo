@@ -18,6 +18,5 @@ usagi::ImGuiDemo::ImGuiDemo(std::shared_ptr<Runtime> runtime)
     );
     setupRenderTargets(false);
 
-    mStateManager->pushState(mStateManager->addChild<ImGuiDemoState>(
-        "ImGuiDemo", this));
+    mStateManager->pushState<ImGuiDemoState>("ImGuiDemo", this);
 }
