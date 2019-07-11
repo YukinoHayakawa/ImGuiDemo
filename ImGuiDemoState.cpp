@@ -5,7 +5,7 @@
 #include <Usagi/Runtime/Input/InputManager.hpp>
 
 #include <Usagi/Extension/ImGui/ImGui.hpp>
-#include <Usagi/Extension/ImGui/ImGuiSubsystem.hpp>
+#include <Usagi/Extension/ImGui/ImGuiSystem.hpp>
 #include <Usagi/Extension/ImGui/DelegatedImGuiComponent.hpp>
 
 usagi::ImGuiDemoState::ImGuiDemoState(
@@ -15,7 +15,7 @@ usagi::ImGuiDemoState::ImGuiDemoState(
     : GraphicalGameState(parent, std::move(name), game)
 {
     const auto input_manager = mGame->runtime()->inputManager();
-    const auto imgui = addSubsystem("imgui", std::make_unique<ImGuiSubsystem>(
+    const auto imgui = addSystem("imgui", std::make_unique<ImGuiSystem>(
         mGame,
         mGame->mainWindow()->window,
         input_manager->virtualKeyboard(),

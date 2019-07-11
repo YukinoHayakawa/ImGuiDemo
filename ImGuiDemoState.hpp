@@ -4,7 +4,7 @@
 
 namespace usagi
 {
-class ImGuiSubsystem;
+class ImGuiSystem;
 
 class ImGuiDemoState : public GraphicalGameState
 {
